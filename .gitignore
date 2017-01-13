@@ -2,6 +2,8 @@
 Thumbs.db
 ehthumbs.db
 *.lrc
+*.ini
+*.ini.bak
 
 # Folder config file
 Desktop.ini
