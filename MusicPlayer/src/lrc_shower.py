@@ -111,24 +111,25 @@ class LRCShower(QListView):
                 raise ValueError(e)
             finally:
                 lrcFile.close()
-            if self.lrcDict:
-                self.mainWidget.playingMusic.lrcState = LRCState.lrcShowing
-                self.lrcTimeList = self.lrcDict.keys()
-                self.lrcTimeList.sort()
-                self.lrcWordList = [self.lrcDict[key] for key in self.lrcTimeList]
-                for word in self.lrcWordList:
-                    try:
-                        word = word.decode("utf-8")
-                    except:
-                        word = word.decode("gbk")
-                    finally:
-                        item = QStandardItem(word)
-                        item.setTextAlignment(Qt.AlignCenter)
-                        item.setFont(QFont(50))
-                        self.model.appendRow(item)
-                if self.mainWidget.playingMusic:
-                    self.mainWidget.musicToLrcDict\
-                    [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = path
+                if self.lrcDict:
+                    if self.mainWidget.playingMusic:
+                        self.mainWidget.playingMusic.lrcState = LRCState.lrcShowing
+                    self.lrcTimeList = self.lrcDict.keys()
+                    self.lrcTimeList.sort()
+                    self.lrcWordList = [self.lrcDict[key] for key in self.lrcTimeList]
+                    for word in self.lrcWordList:
+                        try:
+                            word = word.decode("utf-8")
+                        except:
+                            word = word.decode("gbk")
+                        finally:
+                            item = QStandardItem(word)
+                            item.setTextAlignment(Qt.AlignCenter)
+                            item.setFont(QFont(50))
+                            self.model.appendRow(item)
+                    if self.mainWidget.playingMusic:
+                        self.mainWidget.musicToLrcDict\
+                        [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = path
 
     def downloadLRC(self):
         self.connect(self.mainWidget.playingMusic,
