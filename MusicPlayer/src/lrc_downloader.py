@@ -14,28 +14,6 @@ except AttributeError:
     def _toUtf8(s):
         return s
 
-
-class LRCDownloader(QObject):
-    def __init__(self, parent=None):
-        QObject.__init__(self)
-        self.shower = parent
-        self.thread = None
-
-    def findLRC(self, args=[]):
-        if self.thread and self.thread.isRunning():
-            self.thread.exit()
-        self.thread = LRCDownloaderThread(args)
-        self.connect(self.thread, SIGNAL("complete()"), self.downloadComplete)
-        self.thread.start()
-
-    def stop(self):
-        if self.thread and self.thread.isRunning():
-            self.thread.exit()
-
-    def downloadComplete(self):
-        print 'complete'
-        self.shower.openLRC(self.thread.lrcPath)
-
 class LRCDownloaderThread(QThread):
     def __init__(self, args):
         QThread.__init__(self)

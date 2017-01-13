@@ -63,5 +63,3 @@ class MusicInfoFrame(QFrame):
                 self.titleLabel.setText(QString())
                 self.artistLabel.setText(QString())
 
-
-

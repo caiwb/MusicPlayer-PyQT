@@ -1,6 +1,7 @@
 #-*- encoding: UTF-8 -*-
 
 import re, lrc_downloader
+from music_file_object import *
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
@@ -16,14 +17,24 @@ except AttributeError:
     def _toUtf8(s):
         return s
 
-class LoadinLabel(QLabel):
+class StateLabel(QLabel):
 
     def __init__(self, parent=None):
         QLabel.__init__(self, parent)
         self.parent = parent
+        self.setAcceptDrops(True)
 
     def contextMenuEvent(self, event):
         self.parent.contextMenuEvent(event)
+
+    def dragEnterEvent(self, event):
+        self.parent.dragEnterEvent(event)
+
+    def dragMoveEvent(self, event):
+        self.parent.dragMoveEvent(event)
+
+    def dropEvent(self, event):
+        self.parent.dropEvent(self, event)
 
 
 class LRCShower(QListView):
@@ -49,7 +60,7 @@ class LRCShower(QListView):
         self.currentRow = -1
         self.lrcDict = {}
 
-        self.lrcDownloader = lrc_downloader.LRCDownloader(self)
+        # self.lrcDownloader = lrc_downloader.LRCDownloader(self)
 
         self.lastOpenedPath = self.mainWidget.lastLRCOpenedPath
         self.contextMenu = QMenu(self)
@@ -65,18 +76,28 @@ class LRCShower(QListView):
         self.contextMenu.addSeparator()
         self.contextMenu.addAction(self.deleteAction)
 
-        self.loadingLabel = LoadinLabel(self)
-        self.loadingLabel.setGeometry(150, 110, 200, 200)
+        self.downloadingLabel = StateLabel(self)
+        self.downloadingLabel.setGeometry(150, 110, 200, 200)
         self.movie = QMovie("../res/loading.gif")
         self.movie.setScaledSize(QSize(200, 200))
         self.movie.start()
         self.movie.setSpeed(70)
-        self.loadingLabel.setMovie(self.movie)
-        self.loadingLabel.setContentsMargins(0, 0, 0, 0)
-        self.loadingLabel.setHidden(True)
+        self.downloadingLabel.setMovie(self.movie)
+        self.downloadingLabel.setContentsMargins(0, 0, 0, 0)
+        self.downloadingLabel.setHidden(True)
+
+        self.waitForLrcLabel = StateLabel(self)
+        self.waitForLrcLabel.setText(u"将歌词文件拖入打开，\n   或右键点击下载")
+        self.waitForLrcLabel.setGeometry(190, 110, 200, 200)
+        self.waitForLrcLabel.setHidden(False)
+
+        self.downloadFailedLabel = StateLabel(self)
+        self.downloadFailedLabel.setText(u"   歌词下载失败了，\n请打开本地歌词文件")
+        self.downloadFailedLabel.setGeometry(180, 110, 200, 200)
+        self.downloadFailedLabel.setHidden(True)
 
     def openLRC(self, path=None):
-        self.loadingLabel.setHidden(True)
+        self.downloadingLabel.setHidden(True)
         print len(path)
         if path and len(path) == 0:
             print 'r'
@@ -115,18 +136,13 @@ class LRCShower(QListView):
                     [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = path
 
     def downloadLRC(self):
-
-        self.loadingLabel.setHidden(False)
-        args = [self.mainWidget.playingMusic.title, self.mainWidget.playingMusic.artist]
-        self.lrcDownloader.findLRC(args)
+        self.mainWidget.playingMusic.state = LRCState.downloading
+        self.updateMusic()
 
     def deleteLRC(self):
         self.mainWidget.musicToLrcDict.pop(_toUtf8(self.mainWidget.playingMusic.filePath).data())
-        self.model.clear()
-        self.lrcDict = {}
-        self.lrcTimeList = []
-        self.lrcWordList = []
-        self.currentRow = -1
+        self.mainWidget.playingMusic.state = LRCState.waitForLrc
+        self.updateMusic()
 
     def updateLRC(self, ms):
         if not len(self.lrcDict.keys()) or not self.model.rowCount():
@@ -149,21 +165,38 @@ class LRCShower(QListView):
                 break
 
     def updateMusic(self):
-        self.loadingLabel.setHidden(True)
-        self.lrcDownloader.stop()
+        self.downloadingLabel.setHidden(True)
+        self.waitForLrcLabel.setHidden(True)
+        self.downloadFailedLabel.setHidden(True)
         self.model.clear()
         self.lrcDict = {}
         self.lrcTimeList = []
         self.lrcWordList = []
         self.currentRow = -1
+
+        if not self.mainWidget.playingMusic:
+            self.waitForLrcLabel.setHidden(False)
+            return
+
         if self.mainWidget.playingMusic and \
                 self.mainWidget.musicToLrcDict.has_key(_toUtf8(self.mainWidget.playingMusic.filePath).data()):
-            lrcPath = _fromUtf8(self.mainWidget.musicToLrcDict[_toUtf8(self.mainWidget.playingMusic.filePath).data()])
+            self.mainWidget.playingMusic.lrcState = LRCState.lrcShowing
+
+        state = self.mainWidget.playingMusic.lrcState
+
+        if state == LRCState.waitForLrc:
+            self.waitForLrcLabel.setHidden(False)
+        elif state == LRCState.downloading:
+            self.downloadingLabel.setHidden(False)
+        elif state == LRCState.downloadFailed:
+            self.downloadFailedLabel.setHidden(False)
+        elif state == LRCState.lrcShowing:
+            lrcPath = _fromUtf8(
+                self.mainWidget.musicToLrcDict[_toUtf8(self.mainWidget.playingMusic.filePath).data()])
             self.openLRC(lrcPath)
 
     def contextMenuEvent(self, event):
         self.downloadAction.setEnabled(self.mainWidget.playingIndex != -1)
-        # self.downloadAction.setEnabled(False)
         self.deleteAction.setEnabled(self.mainWidget.playingMusic is not None and
                                      self.mainWidget.musicToLrcDict.has_key(
                                          _toUtf8(self.mainWidget.playingMusic.filePath).data()))
@@ -173,7 +206,7 @@ class LRCShower(QListView):
         if event.mimeData().urls()[0].path().toLower().contains('.lrc'):
             event.accept()
         else:
-            super(QListView, self).dragMoveEvent(event)
+            super(QListView, self).dragEnterEvent(event)
 
     def dragMoveEvent(self, event):
         if event.mimeData().urls()[0].path().toLower().contains('.lrc'):
