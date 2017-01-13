@@ -25,28 +25,29 @@ class LRCDownloaderThread(QThread):
                 url = url.append(arg)
         self.url = unicode(url).encode('utf-8')
         self.lrcUrl = ''
-        self.lrcPath = ''
+        self.lrcPath = QString()
 
     def run(self):
-        print 'run'
         self.getDownloadUrl()
 
     def getDownloadUrl(self):
-            response = urllib2.urlopen(self.url)
-            if response:
-                jsonStr = response.read()
-                jsonParser = json_parser.JsonParser()
-                jsonParser.load(jsonStr)
-                if jsonParser.data.has_key('result') and len(jsonParser.data['result']) \
-                        and jsonParser.data['result'][0]['lrc']:
-                    self.lrcUrl = jsonParser.data['result'][0]['lrc']
-                    self.downloadLRCFile()
-                else:
-                    self.emit(SIGNAL("complete()"))
+        print self.url
+        response = urllib2.urlopen(self.url)
+        if response:
+            jsonStr = response.read()
+            jsonParser = json_parser.JsonParser()
+            jsonParser.load(jsonStr)
+            if jsonParser.data.has_key('result') and len(jsonParser.data['result']) \
+                    and jsonParser.data['result'][0]['lrc']:
+                self.lrcUrl = jsonParser.data['result'][0]['lrc']
+                self.downloadLRCFile()
             else:
-                self.emit(SIGNAL("complete()"))
+                self.emit(SIGNAL("complete()"), False)
+        else:
+            self.emit(SIGNAL("complete()"), False)
 
     def downloadLRCFile(self):
+        print self.lrcUrl
         if self.lrcUrl:
             if isinstance(self.lrcUrl, unicode):
                 self.lrcUrl = self.lrcUrl.encode('utf-8')
@@ -56,8 +57,11 @@ class LRCDownloaderThread(QThread):
                 os.mkdir(path)
             path = path + unicode(self.args[0]) + '_' + unicode(self.args[1]) + '.lrc'
             data = f.read()
-            with open(path, "wb+") as code:
-                code.write(data)
-            code.close()
-            self.lrcPath = path
-            self.emit(SIGNAL("complete()"))
+            if data:
+                with open(path, "wb+") as code:
+                    code.write(data)
+                code.close()
+                self.lrcPath = QString(path)
+                self.emit(SIGNAL("complete()"), True)
+            else:
+                self.emit(SIGNAL("complete()"), False)

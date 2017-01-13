@@ -28,6 +28,7 @@ class LRCState(enum.Enum):
 
 class MusicFile(QObject):
     def __init__(self, filePath):
+        QObject.__init__(self)
         self.filePath = filePath # QString
         self.file = QFileInfo(filePath)
         self.title = QString()
@@ -40,7 +41,7 @@ class MusicFile(QObject):
         self.lrcPath = QString()
         self.lrcState = LRCState.waitForLrc
         self.lrcDownloadThread = LRCDownloaderThread([self.title, self.artist])
-        self.connect(self.lrcDownloadThread, SIGNAL('complete(bool)'), self.downloadComplete)
+        self.connect(self.lrcDownloadThread, SIGNAL('complete(bool)'), self.downloadLRCComplete)
 
     def downloadLRC(self):
         if self.lrcDownloadThread.isRunning():
@@ -49,8 +50,9 @@ class MusicFile(QObject):
         else:
             self.lrcDownloadThread.start()
 
-    def downloadComplete(self, suc):
-        pass
+    def downloadLRCComplete(self, suc):
+        self.lrcState = LRCState.lrcShowing if suc else LRCState.downloadFailed
+        self.emit(SIGNAL('downloadLRCComplete(QString, QString)'), self.filePath, self.lrcDownloadThread.lrcPath)
 
     def absoluteDirPath(self):
         return self.file.absoluteDir().absolutePath()
@@ -100,7 +102,6 @@ class MusicFile(QObject):
             return
 
         suffix = self.suffix()
-
         if suffix == 'mp3':
             audio = MP3(unicode(file.filePath().toUtf8().data(), 'utf-8'))
             if audio.has_key('TIT2'):

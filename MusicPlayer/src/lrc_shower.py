@@ -60,8 +60,6 @@ class LRCShower(QListView):
         self.currentRow = -1
         self.lrcDict = {}
 
-        # self.lrcDownloader = lrc_downloader.LRCDownloader(self)
-
         self.lastOpenedPath = self.mainWidget.lastLRCOpenedPath
         self.contextMenu = QMenu(self)
         self.openAction = QAction(u'打开歌词', self)
@@ -97,11 +95,6 @@ class LRCShower(QListView):
         self.downloadFailedLabel.setHidden(True)
 
     def openLRC(self, path=None):
-        self.downloadingLabel.setHidden(True)
-        print len(path)
-        if path and len(path) == 0:
-            print 'r'
-            return
         if not path:
             path = QFileDialog.getOpenFileName(self, u'打开', self.lastOpenedPath, u'歌词文件 (*.lrc)')
             if path:
@@ -136,13 +129,24 @@ class LRCShower(QListView):
                     [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = path
 
     def downloadLRC(self):
+        self.connect(self.mainWidget.playingMusic,
+                     SIGNAL('downloadLRCComplete(QString, QString)'), self.downloadComplete)
         self.mainWidget.playingMusic.downloadLRC()
-        self.mainWidget.playingMusic.state = LRCState.downloading
+        self.mainWidget.playingMusic.lrcState = LRCState.downloading
         self.updateMusic()
+
+    def downloadComplete(self, musicPath, lrcPath):
+        if not len(lrcPath):
+            self.updateMusic()
+        elif self.mainWidget.playingMusic.filePath == musicPath:
+            self.openLRC(lrcPath)
+        else:
+            self.mainWidget.musicToLrcDict \
+                [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = unicode(lrcPath)
 
     def deleteLRC(self):
         self.mainWidget.musicToLrcDict.pop(_toUtf8(self.mainWidget.playingMusic.filePath).data())
-        self.mainWidget.playingMusic.state = LRCState.waitForLrc
+        self.mainWidget.playingMusic.lrcState = LRCState.waitForLrc
         self.updateMusic()
 
     def updateLRC(self, ms):
