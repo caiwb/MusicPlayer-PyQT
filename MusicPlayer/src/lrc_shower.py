@@ -100,6 +100,7 @@ class LRCShower(QListView):
             if path:
                 self.lastOpenedPath = QFileInfo(path).absoluteDir().absolutePath()
         if path:
+            self.clear()
             if not isinstance(path, unicode):
                 path = unicode(path)
             try:
@@ -111,6 +112,7 @@ class LRCShower(QListView):
             finally:
                 lrcFile.close()
             if self.lrcDict:
+                self.mainWidget.playingMusic.lrcState = LRCState.lrcShowing
                 self.lrcTimeList = self.lrcDict.keys()
                 self.lrcTimeList.sort()
                 self.lrcWordList = [self.lrcDict[key] for key in self.lrcTimeList]
@@ -137,12 +139,12 @@ class LRCShower(QListView):
 
     def downloadComplete(self, musicPath, lrcPath):
         if not len(lrcPath):
-            self.updateMusic()
+            if self.mainWidget.playingMusic.filePath == musicPath:
+                self.updateMusic()
         elif self.mainWidget.playingMusic.filePath == musicPath:
             self.openLRC(lrcPath)
         else:
-            self.mainWidget.musicToLrcDict \
-                [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = unicode(lrcPath)
+            self.mainWidget.musicToLrcDict[_toUtf8(musicPath).data()] = unicode(lrcPath)
 
     def deleteLRC(self):
         self.mainWidget.musicToLrcDict.pop(_toUtf8(self.mainWidget.playingMusic.filePath).data())
@@ -169,7 +171,7 @@ class LRCShower(QListView):
                     # self.scrollTo(self.model.index(self.currentRow, 0), QAbstractItemView.PositionAtCenter)
                 break
 
-    def updateMusic(self):
+    def clear(self):
         self.downloadingLabel.setHidden(True)
         self.waitForLrcLabel.setHidden(True)
         self.downloadFailedLabel.setHidden(True)
@@ -178,6 +180,9 @@ class LRCShower(QListView):
         self.lrcTimeList = []
         self.lrcWordList = []
         self.currentRow = -1
+
+    def updateMusic(self):
+        self.clear()
 
         if not self.mainWidget.playingMusic:
             self.waitForLrcLabel.setHidden(False)

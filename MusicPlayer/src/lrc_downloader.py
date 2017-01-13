@@ -42,9 +42,9 @@ class LRCDownloaderThread(QThread):
                 self.lrcUrl = jsonParser.data['result'][0]['lrc']
                 self.downloadLRCFile()
             else:
-                self.emit(SIGNAL("complete()"), False)
+                self.emit(SIGNAL("complete(bool)"), False)
         else:
-            self.emit(SIGNAL("complete()"), False)
+            self.emit(SIGNAL("complete(bool)"), False)
 
     def downloadLRCFile(self):
         print self.lrcUrl
@@ -62,6 +62,6 @@ class LRCDownloaderThread(QThread):
                     code.write(data)
                 code.close()
                 self.lrcPath = QString(path)
-                self.emit(SIGNAL("complete()"), True)
+                self.emit(SIGNAL("complete(bool)"), True)
             else:
-                self.emit(SIGNAL("complete()"), False)
+                self.emit(SIGNAL("complete(bool)"), False)

@@ -50,6 +50,10 @@ class MusicFile(QObject):
         else:
             self.lrcDownloadThread.start()
 
+    def stopDownloadLRC(self):
+        if self.lrcDownloadThread.isRunning():
+            self.lrcDownloadThread.terminate()
+
     def downloadLRCComplete(self, suc):
         self.lrcState = LRCState.lrcShowing if suc else LRCState.downloadFailed
         self.emit(SIGNAL('downloadLRCComplete(QString, QString)'), self.filePath, self.lrcDownloadThread.lrcPath)
