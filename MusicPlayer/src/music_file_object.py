@@ -40,6 +40,17 @@ class MusicFile(QObject):
         self.lrcPath = QString()
         self.lrcState = LRCState.waitForLrc
         self.lrcDownloadThread = LRCDownloaderThread([self.title, self.artist])
+        self.connect(self.lrcDownloadThread, SIGNAL('complete(bool)'), self.downloadComplete)
+
+    def downloadLRC(self):
+        if self.lrcDownloadThread.isRunning():
+            self.lrcDownloadThread.terminate()
+            self.lrcDownloadThread.start()
+        else:
+            self.lrcDownloadThread.start()
+
+    def downloadComplete(self, suc):
+        pass
 
     def absoluteDirPath(self):
         return self.file.absoluteDir().absolutePath()
@@ -82,9 +93,6 @@ class MusicFile(QObject):
         except:
             s = s.decode('raw_unicode_escape')
             return s
-
-    def lrcStateUpdate(self):
-        pass
 
     def musicInfo(self, file):
         if self.getType() == 1:

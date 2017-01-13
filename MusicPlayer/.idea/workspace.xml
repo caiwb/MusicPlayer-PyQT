@@ -14,7 +14,7 @@
     <SUITE FILE_PATH="coverage/MusicPlayer$winwidget.coverage" NAME="winwidget Coverage Results" MODIFIED="1483688031587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/MusicPlayer$main.coverage" NAME="main Coverage Results" MODIFIED="1484191388781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/MusicPlayer$test_phonon.coverage" NAME="test_phonon Coverage Results" MODIFIED="1483689365488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/MusicPlayer$launcher.coverage" NAME="launcher Coverage Results" MODIFIED="1484273842824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/MusicPlayer$launcher.coverage" NAME="launcher Coverage Results" MODIFIED="1484279659521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/MusicPlayer$test.coverage" NAME="test Coverage Results" MODIFIED="1484128246786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/MusicPlayer$Test.coverage" NAME="Test Coverage Results" MODIFIED="1483685695132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MusicPlayer$window__1_.coverage" NAME="window (1) Coverage Results" MODIFIED="1484102895586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="lrc_downloader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lrc_downloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="422">
+              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -38,11 +38,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/json_parser.py">
+      <file leaf-file-name="setting.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/setting.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2356">
-              <caret line="124" column="64" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="64" />
+            <state relative-caret-position="133">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="我真的受伤了_张学友.lrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/我真的受伤了_张学友.lrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="心如刀割_张学友.lrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/心如刀割_张学友.lrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,74 +80,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QStandardItemModel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QStandardItemModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="music_info_frame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/music_info_frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+            <state relative-caret-position="326">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lrc_shower.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lrc_shower.py">
+      <file leaf-file-name="music_player_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/music_player_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="247">
+              <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding>
-                <element signature="e#26#51#0" expanded="true" />
+                <element signature="e#26#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QLabel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QLabel.py">
+      <file leaf-file-name="music_system_tray.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/music_system_tray.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="375">
+              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__builtin__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/__builtin__.py">
+      <file leaf-file-name="music_file_object.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/music_file_object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6479">
-              <caret line="341" column="4" lean-forward="false" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="299">
+              <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+              <folding>
+                <element signature="e#26#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urllib2.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Python27/Lib/urllib2.py">
+      <file leaf-file-name="lrc_shower.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lrc_shower.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7467">
-              <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QWidget.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QWidget.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13395">
-              <caret line="708" column="8" lean-forward="false" selection-start-line="708" selection-start-column="8" selection-end-line="708" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="260">
+              <caret line="138" column="50" lean-forward="true" selection-start-line="138" selection-start-column="50" selection-end-line="138" selection-end-column="50" />
+              <folding>
+                <element signature="e#26#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,9 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addSecs</find>
-      <find>append</find>
-      <find>MediaObject</find>
       <find>PlayingState</find>
       <find>playMusic</find>
       <find>playMusicAtIndex</find>
@@ -173,6 +174,9 @@
       <find>loading</find>
       <find>print</find>
       <find>favAction</find>
+      <find>LRCDownloaderThread</find>
+      <find>LRCDownloader</find>
+      <find>updateLRC</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -199,13 +203,14 @@
         <option value="$PROJECT_DIR$/src/launcher.py" />
         <option value="$PROJECT_DIR$/src/bottom_tool_frame.py" />
         <option value="$PROJECT_DIR$/src/music_system_tray.py" />
-        <option value="$PROJECT_DIR$/src/music_player_main.py" />
         <option value="$PROJECT_DIR$/src/json_parser.py" />
         <option value="$PROJECT_DIR$/src/setting.ini" />
-        <option value="$PROJECT_DIR$/src/music_info_frame.py" />
-        <option value="$PROJECT_DIR$/src/lrc_shower.py" />
-        <option value="$PROJECT_DIR$/src/lrc_downloader.py" />
         <option value="$PROJECT_DIR$/src/music_tableview.py" />
+        <option value="$PROJECT_DIR$/src/music_player_main.py" />
+        <option value="$PROJECT_DIR$/src/music_info_frame.py" />
+        <option value="$PROJECT_DIR$/src/lrc_downloader.py" />
+        <option value="$PROJECT_DIR$/src/lrc_shower.py" />
+        <option value="$PROJECT_DIR$/src/music_file_object.py" />
       </list>
     </option>
   </component>
@@ -236,6 +241,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,32 +278,16 @@
               <option name="myItemId" value="MusicPlayer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MusicPlayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MusicPlayer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PPlayer-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -309,6 +300,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\MusicPlayer-PyQT\MusicPlayer\res" />
       <recent name="E:\PycharmProjects\MusicPlayer\src" />
       <recent name="E:\PycharmProjects\MusicPlayer\res" />
     </key>
@@ -636,34 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QTabWidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QPushButton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="227" column="8" lean-forward="false" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QHBoxLayout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/music_tableview.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -675,13 +639,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.py" />
-    <entry file="file://D:/Python27/Lib/site-packages/qstring/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QHeaderView.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -721,13 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3173">
           <caret line="167" column="8" lean-forward="false" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/enum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,21 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="346" column="8" lean-forward="false" selection-start-line="346" selection-start-column="8" selection-end-line="346" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/music_system_tray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setting.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -907,34 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/music_player_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="91" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/launcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13395">
           <caret line="708" column="8" lean-forward="false" selection-start-line="708" selection-start-column="8" selection-end-line="708" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/music_info_frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -950,7 +861,7 @@
     <entry file="file://$PROJECT_DIR$/src/json_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2356">
-          <caret line="124" column="64" lean-forward="true" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="64" />
+          <caret line="124" column="64" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -971,20 +882,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lrc_downloader.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QStandardItemModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        <state relative-caret-position="3306">
+          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setting.ini.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/enum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/qstring/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#25#51#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtGui/QStandardItemModel.py">
+    <entry file="file://$PROJECT_DIR$/src/launcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="16" />
+        <state relative-caret-position="76">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/我真的受伤了_张学友.lrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/心如刀割_张学友.lrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/music_system_tray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -999,12 +958,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/music_player_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <element signature="e#26#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setting.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lrc_downloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding>
+            <element signature="e#25#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lrc_shower.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="260">
+          <caret line="138" column="50" lean-forward="true" selection-start-line="138" selection-start-column="50" selection-end-line="138" selection-end-column="50" />
           <folding>
             <element signature="e#26#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/music_info_frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/music_file_object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding>
+            <element signature="e#26#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

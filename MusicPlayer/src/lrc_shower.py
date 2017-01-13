@@ -136,6 +136,7 @@ class LRCShower(QListView):
                     [_toUtf8(self.mainWidget.playingMusic.filePath).data()] = path
 
     def downloadLRC(self):
+        self.mainWidget.playingMusic.downloadLRC()
         self.mainWidget.playingMusic.state = LRCState.downloading
         self.updateMusic()
 

@@ -4,6 +4,7 @@ ehthumbs.db
 *.lrc
 *.ini
 *.ini.bak
+*.pyc
 
 # Folder config file
 Desktop.ini

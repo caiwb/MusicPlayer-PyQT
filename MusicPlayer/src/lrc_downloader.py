@@ -26,9 +26,9 @@ class LRCDownloaderThread(QThread):
         self.url = unicode(url).encode('utf-8')
         self.lrcUrl = ''
         self.lrcPath = ''
-        print self.url
 
     def run(self):
+        print 'run'
         self.getDownloadUrl()
 
     def getDownloadUrl(self):
