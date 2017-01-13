@@ -26,6 +26,8 @@ class MusicTableView(QTableView):
         self.model = QStandardItemModel()
         self._musicList = parent.musicList
         self._favList = parent.favList
+        self.tipRow = -1
+        self.list = self._musicList if self.type == 'all' else self._favList
 
         self.model.setColumnCount(3)
 
@@ -137,7 +139,7 @@ class MusicTableView(QTableView):
         self.deleteAction.setEnabled(self.model.itemFromIndex(index) is not None)
         self.favAction.setEnabled(self.model.itemFromIndex(index) is not None)
 
-        if self.type == 'all':
+        if self.type == 'all' and self.model.itemFromIndex(index):
             if self._parent.musicList[self.model.itemFromIndex(index).row()] in self._parent.favList:
                 self.favAction.setText(u"取消收藏")
             else:
@@ -177,9 +179,6 @@ class MusicTableView(QTableView):
                 s = url.path().remove(0, 1)
                 paths.append(s)
         self._parent.addMusics(paths)
-
-    # def mouseMoveEvent(self, event):
-    #     QTableView.mouseMoveEvent(self, event)
 
     def updatePlayingItem(self):
         if self._playingIndex != self._parent.playingIndex:

@@ -203,8 +203,9 @@ class MainWindow(QWidget):
                 self.playingIndex = tableView.model.itemFromIndex(selectedRows[0]).row()
             else:
                 self.playingIndex = 0
-            self.playingMusic = self.playingList[self.playingIndex]
-            self.playMusic(self.playingMusic)
+            if len(self.playingList) > self.playingIndex:
+                self.playingMusic = self.playingList[self.playingIndex]
+                self.playMusic(self.playingMusic)
 
     def stop(self):
         if self.playingMusic:
