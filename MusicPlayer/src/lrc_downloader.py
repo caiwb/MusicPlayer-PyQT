@@ -35,11 +35,10 @@ class LRCDownloaderThread(QThread):
         response = urllib2.urlopen(self.url)
         if response:
             jsonStr = response.read()
-            jsonParser = json_parser.JsonParser()
-            jsonParser.load(jsonStr)
-            if jsonParser.data.has_key('result') and len(jsonParser.data['result']) \
-                    and jsonParser.data['result'][0]['lrc']:
-                self.lrcUrl = jsonParser.data['result'][0]['lrc']
+            data = json.loads(jsonStr)
+            if data.has_key('result') and len(data['result']) \
+                    and data['result'][0]['lrc']:
+                self.lrcUrl = data['result'][0]['lrc']
                 self.downloadLRCFile()
             else:
                 self.emit(SIGNAL("complete(bool)"), False)
