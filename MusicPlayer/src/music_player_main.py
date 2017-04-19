@@ -151,7 +151,8 @@ class MainWindow(QWidget):
         config.set('Player', 'lastLRCOpenedPath', _toUtf8(self.musicInfoFrame.lrcShower.lastOpenedPath).data())
         config.set('Player', 'musicToLRCDict', self.musicToLrcDict)
         try:
-            configFile = open('./setting.ini', 'w+')
+            configPath = os.path.join(os.path.dirname(__file__), "setting.ini")
+            configFile = open(configPath, 'w+')
             config.write(configFile)
         except Exception as e:
             raise ValueError(e)
@@ -160,12 +161,10 @@ class MainWindow(QWidget):
 
     def importConfig(self):
         self.isImporting = True
+        config = ConfigParser.ConfigParser()
         try:
-            config = ConfigParser.ConfigParser()
-            config.read('./setting.ini')
-        except Exception as e:
-            raise ValueError(e)
-        finally:
+            configPath = os.path.join(os.getcwd(), "setting.ini")
+            config.read(configPath)
             if config:
                 self.lastOpenedPath = _fromUtf8(config.get('Player', 'lastOpenedPath'))
                 musicList = eval(config.get('Player', 'musicList'))
@@ -175,6 +174,30 @@ class MainWindow(QWidget):
                 self.lastLRCOpenedPath = _fromUtf8(config.get('Player', 'lastLRCOpenedPath'))
                 self.addMusics(qMusicList, qFavList)
                 self.musicToLrcDict = eval(config.get('Player', 'musicToLRCDict'))
+        except Exception as e:
+            config.add_section('Player')
+            config.set('Player', 'lastOpenedPath',
+                       _toUtf8(self.lastOpenedPath).data())
+            musicPathList = []
+            favPathList = []
+            for music in self.musicList:
+                musicPathList.append(_toUtf8(music.filePath).data())
+            for music in self.favList:
+                favPathList.append(_toUtf8(music.filePath).data())
+            config.set('Player', 'musicList', [])
+            config.set('Player', 'favList', [])
+            config.set('Player', 'lastLRCOpenedPath', '')
+            config.set('Player', 'musicToLRCDict', {})
+            self.isImporting = False
+            try:
+                configPath = os.path.join(os.path.dirname(__file__), "setting.ini")
+                configFile = open(configPath, 'w+')
+                config.write(configFile)
+            except Exception as e:
+                raise ValueError(e)
+            finally:
+                self.isImporting = False
+                configFile.close()
 
     def playMusicAtIndex(self, i):
         self.playingList = self.musicList if self.tabWidget.currentIndex() == 0 else self.favList

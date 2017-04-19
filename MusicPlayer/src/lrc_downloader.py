@@ -1,4 +1,5 @@
 #-*- encoding: UTF-8 -*-
+import logging
 from PyQt4.QtCore import *
 import urllib2, json, os
 
@@ -31,7 +32,6 @@ class LRCDownloaderThread(QThread):
         self.getDownloadUrl()
 
     def getDownloadUrl(self):
-        print self.url
         response = urllib2.urlopen(self.url)
         if response:
             jsonStr = response.read()
@@ -46,7 +46,6 @@ class LRCDownloaderThread(QThread):
             self.emit(SIGNAL("complete(bool)"), False)
 
     def downloadLRCFile(self):
-        print self.lrcUrl
         if self.lrcUrl:
             if isinstance(self.lrcUrl, unicode):
                 self.lrcUrl = self.lrcUrl.encode('utf-8')
