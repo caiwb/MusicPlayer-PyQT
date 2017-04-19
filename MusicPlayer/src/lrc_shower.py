@@ -1,6 +1,6 @@
 #-*- encoding: UTF-8 -*-
 
-import re, lrc_downloader
+import re
 from music_file_object import *
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *

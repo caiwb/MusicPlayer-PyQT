@@ -1,6 +1,6 @@
 #-*- encoding: UTF-8 -*-
 from PyQt4.QtCore import *
-import urllib2, md5, json, os, json_parser
+import urllib2, json, os
 
 try:
     _fromUtf8 = QString.fromUtf8
@@ -17,7 +17,7 @@ except AttributeError:
 class LRCDownloaderThread(QThread):
     def __init__(self, args):
         QThread.__init__(self)
-        self.args = args #0-music 1-artist
+        self.args = args # 0-music 1-artist
         url = QString('http://geci.me/api/lyric')
         for arg in args:
             if isinstance(arg, QString):
