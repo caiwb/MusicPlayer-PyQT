@@ -20,6 +20,14 @@ class MusicTableView(QTableView):
     def __init__(self, type, parent=None):
         QTableView.__init__(self, None)
 
+        self.setStyleSheet(
+            '''
+            MusicTableView
+            {background-color: rgba(230, 230, 240, 0);
+            selection-background-color: rgba(100, 100, 255, 55)}
+            '''
+        )
+
         self._playingIndex = -1
         self._parent = parent
         self.type = type
@@ -42,22 +50,12 @@ class MusicTableView(QTableView):
         self.horizontalHeader().setResizeMode(QHeaderView.Stretch)
         self.horizontalHeader().setClickable(False)
         self.horizontalHeader().hide()
-        self.horizontalHeader().setStyleSheet(
-            '''
-            selection-background-color:lightblue;
-            '''
-        )
 
         self.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.setSelectionMode(QAbstractItemView.ExtendedSelection)
 
         self.setFocusPolicy(Qt.NoFocus)
         self.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.setStyleSheet(
-            '''
-            selection-background-color:lightblue;
-            '''
-        )
 
         self.setModel(self.model)
 
@@ -67,7 +65,7 @@ class MusicTableView(QTableView):
         self.favAction = QAction(u'收藏', self)
         self.openFolderAction = QAction(u'打开文件', self)
 
-        #signals
+        # signals
         self.connect(self.playAction, SIGNAL('triggered()'), self.playSelections)
         self.connect(self.deleteAction, SIGNAL('triggered()'), self.deleteSelections)
         self.connect(self.favAction, SIGNAL('triggered()'), self.collectSelections)
@@ -75,7 +73,7 @@ class MusicTableView(QTableView):
 
         if self.type == 'all':
             self.setAcceptDrops(True)
-            #menu
+            # menu
             self.contextMenu.addAction(self.playAction)
             self.contextMenu.addSeparator()
             self.contextMenu.addAction(self.deleteAction)
@@ -85,7 +83,7 @@ class MusicTableView(QTableView):
             self.contextMenu.addAction(self.openFolderAction)
 
         elif self.type == 'fav':
-            #menu
+            # menu
             self.contextMenu.addAction(self.playAction)
             self.contextMenu.addSeparator()
             self.contextMenu.addAction(self.deleteAction)
@@ -103,12 +101,16 @@ class MusicTableView(QTableView):
         if self.type == 'all':
             for index in selectedRows:
                 i = self.model.itemFromIndex(index).row()
+                if self._parent.playingIndex == i:
+                    self._parent.stop()
                 musicDelList.append(self._musicList[i])
             for music in musicDelList:
                 self._musicList.remove(music)
         elif self.type == 'fav':
             for index in selectedRows:
                 i = self.model.itemFromIndex(index).row()
+                if self._parent.playingIndex == i:
+                    self._parent.stop()
                 musicDelList.append(self._favList[i])
             for music in musicDelList:
                 self._favList.remove(music)
@@ -182,12 +184,12 @@ class MusicTableView(QTableView):
 
     def updatePlayingItem(self):
         if self._playingIndex != self._parent.playingIndex:
-            if self._playingIndex != -1:
+            if self._playingIndex != -1 and self.model.rowCount() > self._playingIndex:
                 self.model.item(self._playingIndex, 0).setForeground(QBrush(QColor(0, 0, 0)))
                 self.model.item(self._playingIndex, 1).setForeground(QBrush(QColor(0, 0, 0)))
                 self.model.item(self._playingIndex, 2).setForeground(QBrush(QColor(0, 0, 0)))
             self._playingIndex = self._parent.playingIndex
-            if self._playingIndex != -1:
-                self.model.item(self._playingIndex, 0).setForeground(QBrush(QColor(255, 0, 0)))
-                self.model.item(self._playingIndex, 1).setForeground(QBrush(QColor(255, 0, 0)))
-                self.model.item(self._playingIndex, 2).setForeground(QBrush(QColor(255, 0, 0)))
+            if self._playingIndex != -1 and self.model.rowCount() > self._playingIndex:
+                self.model.item(self._playingIndex, 0).setForeground(QBrush(QColor(255, 100, 100)))
+                self.model.item(self._playingIndex, 1).setForeground(QBrush(QColor(255, 100, 100)))
+                self.model.item(self._playingIndex, 2).setForeground(QBrush(QColor(255, 100, 100)))

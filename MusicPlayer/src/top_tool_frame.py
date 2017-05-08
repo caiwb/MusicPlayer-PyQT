@@ -18,60 +18,66 @@ except AttributeError:
 
 class TopToolFrame(QFrame):
 
-    def __init__(self, parent=None):
+    def __init__(self, main, parent=None):
         QFrame.__init__(self, parent)
-        self.parent = parent
+        self.main = main
         self.setStyleSheet(
         '''
-        border-image: url(../res/box.png);
+        border-image: url(res/bgColor.png);
         background-repeat: no-repeat;
         ''')
         self.isDraging = False
         self.setGeometry(0, 0, 800, 60)
-        self.addRobotLogo(parent)
+        self.addRobotLogo(main)
         self.addButtons(self)
+        titleLabel = QLabel(self)
+        titleLabel.setText(u'CC音乐')
+        titleLabel.setGeometry(110, 10, 100, 40)
+        titleFont = QFont("Microsoft YaHei", 15, 70)
+        titleLabel.setFont(titleFont)
+        titleLabel.setStyleSheet("color: rgb(255, 255, 255)")
 
-    def addRobotLogo(self, parent):
-        btn = QPushButton(parent)
+    def addRobotLogo(self, main):
+        btn = QPushButton(main)
         btn.setObjectName("btnSpecial")
         btn.setStyleSheet(
             '''
             QPushButton#btnSpecial {
-            border-image: url(../res/robot_1.png);
+            border-image: url(res/robot_1.png);
             background-repeat: no-repeat;
             }
             QPushButton#btnSpecial:hover {
-            border-image: url(../res/robot_2.png);
+            border-image: url(res/robot_2.png);
             background-repeat: no-repeat;
             }
             QPushButton#btnSpecial:pressed {
-            border-image: url(../res/robot_3.png);
+            border-image: url(res/robot_3.png);
             background-repeat: no-repeat;
             }
             ''')
-        btn.setGeometry(20, 0, 67, 60)
+        btn.setGeometry(20, 60, 67, 60)
 
-    def addButtons(self, parent):
-        closeButton = PushButton(parent)
-        closeButton.loadPixmap('../res/close.png')
+    def addButtons(self, main):
+        closeButton = PushButton(main)
+        closeButton.loadPixmap('res/close.png')
         closeButton.setGeometry(770, 10, 16, 16)
-        closeButton.clicked.connect(self.parent.close)
+        closeButton.clicked.connect(self.main.close)
 
-        miniButton = PushButton(parent)
-        miniButton.loadPixmap('../res/mini.png')
+        miniButton = PushButton(main)
+        miniButton.loadPixmap('res/mini.png')
         miniButton.setGeometry(740, 10, 16, 16)
-        miniButton.clicked.connect(self.parent.showMinimized)
+        miniButton.clicked.connect(self.main.showMinimized)
 
     def mousePressEvent(self, event):
         self.isDraging = True
-        self.parent.dragPostion = event.globalPos() - self.parent.pos()
+        self.main.dragPostion = event.globalPos() - self.main.pos()
 
     def mouseReleaseEvent(self, event):
         self.isDraging = False
 
     def mouseMoveEvent(self, event):
         if self.isDraging:
-            self.parent.move(event.globalPos() - self.parent.dragPostion)
+            self.main.move(event.globalPos() - self.main.dragPostion)
 
 
 class PushButton(QPushButton):

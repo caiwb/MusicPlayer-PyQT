@@ -19,11 +19,11 @@ except AttributeError:
 
 class MusicInfoFrame(QFrame):
 
-    def __init__(self, parent=None):
+    def __init__(self, main, parent=None):
         QFrame.__init__(self, parent)
-        self._parent = parent
+        self.main = main
         self._playingIndex = -1
-        self._mediaObject = parent.mediaObject
+        self._mediaObject = main.mediaObject
         rect = parent.rect()
 
         self.setGeometry(0, 60, rect.width() - 300, rect.height() - 120)
@@ -41,7 +41,7 @@ class MusicInfoFrame(QFrame):
         self.artistLabel.setMaximumWidth(rect.width() - 300)
         self.artistLabel.setAlignment(Qt.AlignCenter)
 
-        self.lrcShower = lrc_shower.LRCShower(self._parent)
+        self.lrcShower = lrc_shower.LRCShower(self.main)
 
         vLayout = QtGui.QVBoxLayout(self)
         vLayout.addWidget(self.titleLabel)
@@ -53,12 +53,12 @@ class MusicInfoFrame(QFrame):
         vLayout.setStretchFactor(self.lrcShower, 10)
 
     def updateInfo(self):
-        if self._playingIndex != self._parent.playingIndex:
+        if self._playingIndex != self.main.playingIndex:
             self.lrcShower.updateMusic()
-            if self._parent.playingIndex != -1:
-                self._playingIndex = self._parent.playingIndex
-                self.titleLabel.setText(self._parent.playingMusic.title)
-                self.artistLabel.setText(self._parent.playingMusic.artist)
+            if self.main.playingIndex != -1:
+                self._playingIndex = self.main.playingIndex
+                self.titleLabel.setText(self.main.playingMusic.title)
+                self.artistLabel.setText(self.main.playingMusic.artist)
             else:
                 self.titleLabel.setText(QString())
                 self.artistLabel.setText(QString())

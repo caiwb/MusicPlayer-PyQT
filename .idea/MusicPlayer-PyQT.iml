@@ -2,7 +2,9 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/MusicPlayer/3rdLib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MusicPlayer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MusicPlayer/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MusicPlayer" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.12 (D:\Python27\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

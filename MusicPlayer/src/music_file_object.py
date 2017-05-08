@@ -1,8 +1,8 @@
-#-*- encoding: UTF-8 -*-
+# -*- encoding: UTF-8 -*-
 
 import enum, chardet
-from mutagen.mp3 import MP3
-from mutagen.asf import ASF
+from lib.mutagen.mp3 import MP3
+from lib.mutagen.asf import ASF
 from lrc_downloader import *
 from PyQt4.phonon import Phonon
 
@@ -29,7 +29,7 @@ class LRCState(enum.Enum):
 class MusicFile(QObject):
     def __init__(self, filePath):
         QObject.__init__(self)
-        self.filePath = filePath # QString
+        self.filePath = filePath  # QString
         self.file = QFileInfo(filePath)
         self.title = QString()
         self.artist = QString()
@@ -86,6 +86,7 @@ class MusicFile(QObject):
     def getStringCode(self, s):
         global defaultcode
         try:
+            dic = chardet.detect(s)
             code = chardet.detect(s)['encoding']
             if QString(s).toLower().contains('\\u'):
                 s = s.decode('raw_unicode_escape')
@@ -94,7 +95,7 @@ class MusicFile(QObject):
             elif QString(code).toLower().contains('ascii'):
                 s = s.decode(code)
             else:
-                s = s.decode(defaultcode)
+                s = _toUtf8(QString.fromLocal8Bit(QString(s)))
             return s
         except:
             s = s.decode('raw_unicode_escape')
@@ -104,7 +105,6 @@ class MusicFile(QObject):
         if self.getType() == 1:
             self.title = file.fileName()
             return
-
         suffix = self.suffix()
         if suffix == 'mp3':
             audio = MP3(unicode(file.filePath().toUtf8().data(), 'utf-8'))

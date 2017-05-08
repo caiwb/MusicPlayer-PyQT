@@ -19,12 +19,12 @@ except AttributeError:
 
 class BottomToolFrame(QFrame):
 
-    def __init__(self, parent=None):
+    def __init__(self, main, parent=None):
         QFrame.__init__(self, parent)
-        self._parent = parent
-        self._mediaObject = parent.mediaObject
-        self._audioOutput = parent.audioOutput
-        self._playingMusic = parent.playingMusic
+        self.main = main
+        self._mediaObject = main.mediaObject
+        self._audioOutput = main.audioOutput
+        self._playingMusic = main.playingMusic
         self.playingOrder = 0
 
         self.setStyleSheet(
@@ -37,19 +37,50 @@ class BottomToolFrame(QFrame):
         ''')
         rect = parent.rect()
         self.setGeometry(0, rect.height() - 60, rect.width(), 60)
-
         self.lastButton = QPushButton()
-        self.lastButton.setText(u"上一首")
+        self.lastButton.setMinimumSize(40, 40)
+        self.lastButton.setObjectName("btnSpecial")
+        self.lastButton.setStyleSheet(
+        '''
+        QPushButton#btnSpecial {
+        border-image: url(res/last.png);
+        background-repeat: no-repeat;
+        }
+        QPushButton#btnSpecial:pressed {
+        border-image: url(res/last_press.png);
+        background-repeat: no-repeat;
+        }
+        ''')
 
         self.playButton = QPushButton()
-        self.playButton.setText(u"播放")
-
-        self.stopButton = QPushButton()
-        self.stopButton.setText(u"停止")
-        self.stopButton.setEnabled(False)
-
+        # self.playButton.setText(u"播放")
+        self.playButton.setMinimumSize(40, 40)
+        self.playButton.setObjectName("btnSpecial")
+        self.playButton.setStyleSheet(
+        '''
+        QPushButton#btnSpecial {
+        border-image: url(res/play.png);
+        background-repeat: no-repeat;
+        }
+        QPushButton#btnSpecial:pressed {
+        border-image: url(res/play_press.png);
+        background-repeat: no-repeat;
+        }
+        ''')
         self.nextButton = QPushButton()
-        self.nextButton.setText(u"下一首")
+        self.nextButton.setMinimumSize(40, 40)
+        self.nextButton.setObjectName("btnSpecial")
+        self.nextButton.setStyleSheet(
+        '''
+        QPushButton#btnSpecial {
+        border-image: url(res/next.png);
+        background-repeat: no-repeat;
+        }
+        QPushButton#btnSpecial:pressed {
+        border-image: url(res/next_press.png);
+        background-repeat: no-repeat;
+        }
+        ''')
 
         self.orderButton = QPushButton()
         self.orderButton.setText(u"顺序播放")
@@ -70,7 +101,6 @@ class BottomToolFrame(QFrame):
         hLayout = QHBoxLayout(self)
         hLayout.addWidget(self.lastButton)
         hLayout.addWidget(self.playButton)
-        hLayout.addWidget(self.stopButton)
         hLayout.addWidget(self.nextButton)
         hLayout.addWidget(self.orderButton)
         hLayout.addWidget(self.seekSlider)
@@ -79,7 +109,6 @@ class BottomToolFrame(QFrame):
         hLayout.addStretch()
         hLayout.setStretchFactor(self.lastButton, 1)
         hLayout.setStretchFactor(self.playButton, 1)
-        hLayout.setStretchFactor(self.stopButton, 1)
         hLayout.setStretchFactor(self.nextButton, 1)
         hLayout.setStretchFactor(self.orderButton, 1)
         hLayout.setStretchFactor(self.seekSlider, 10)
@@ -88,7 +117,6 @@ class BottomToolFrame(QFrame):
 
         self.lastButton.clicked.connect(self.lastMusic)
         self.playButton.clicked.connect(self.playControl)
-        self.stopButton.clicked.connect(self.stop)
         self.nextButton.clicked.connect(self.nextMusic)
         self.orderButton.clicked.connect(self.changeOrder)
 
@@ -111,7 +139,7 @@ class BottomToolFrame(QFrame):
 
     def updateTimeLabel(self, ms):
         time = ms/1000
-        if not self._parent.playingMusic:
+        if not self.main.playingMusic:
             self.timeLabel.setText('00:00/00:00')
         elif self.curTimeInt != time:
             self.curTimeInt = time
@@ -119,22 +147,37 @@ class BottomToolFrame(QFrame):
             m = self.curTimeInt % 3600 / 60
             s = self.curTimeInt % 3600 % 60
             curTime = QTime(h, m, s)
-            totTime = self._parent.playingMusic.time
+            totTime = self.main.playingMusic.time
             curTimeString = curTime.toString("mm:ss") if not totTime.hour() else curTime.toString("hh:mm:ss")
             strList = QStringList()
             strList.append(curTimeString)
-            strList.append(self._parent.playingMusic.timeString)
+            strList.append(self.main.playingMusic.timeString)
             self.timeString = strList.join('/')
             self.timeLabel.setText(self.timeString)
 
     def updateButtons(self):
-        state = self._parent.mediaObject.state()
+        state = self.main.mediaObject.state()
         if state == Phonon.PlayingState:
-            self.playButton.setText(u"暂停")
-            self.stopButton.setEnabled(True)
-        elif state == Phonon.PausedState:
-            self.playButton.setText(u"播放")
-            self.stopButton.setEnabled(True)
-        elif state == Phonon.StoppedState:
-            self.playButton.setText(u"播放")
-            self.stopButton.setEnabled(False)
+            self.playButton.setStyleSheet(
+                '''
+                QPushButton#btnSpecial {
+                border-image: url(res/pause.png);
+                background-repeat: no-repeat;
+                }
+                QPushButton#btnSpecial:pressed {
+                border-image: url(res/pause_press.png);
+                background-repeat: no-repeat;
+                }
+                ''')
+        elif state == Phonon.PausedState or state == Phonon.StoppedState:
+            self.playButton.setStyleSheet(
+                '''
+                QPushButton#btnSpecial {
+                border-image: url(res/play.png);
+                background-repeat: no-repeat;
+                }
+                QPushButton#btnSpecial:pressed {
+                border-image: url(res/play_press.png);
+                background-repeat: no-repeat;
+                }
+                ''')

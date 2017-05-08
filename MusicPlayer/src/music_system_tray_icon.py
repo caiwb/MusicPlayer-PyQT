@@ -63,5 +63,3 @@ class MusicSystemTray(QSystemTrayIcon):
             self.playAction.setText(u"播放")
             self.stopAction.setEnabled(False)
 
-
-

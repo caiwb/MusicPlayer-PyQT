@@ -1,4 +1,5 @@
 #-*- encoding: UTF-8 -*-
+
 import logging
 from PyQt4.QtCore import *
 import urllib2, json, os
@@ -32,34 +33,40 @@ class LRCDownloaderThread(QThread):
         self.getDownloadUrl()
 
     def getDownloadUrl(self):
-        response = urllib2.urlopen(self.url)
-        if response:
-            jsonStr = response.read()
-            data = json.loads(jsonStr)
-            if data.has_key('result') and len(data['result']) \
-                    and data['result'][0]['lrc']:
-                self.lrcUrl = data['result'][0]['lrc']
-                self.downloadLRCFile()
+        try:
+            response = urllib2.urlopen(self.url)
+            if response:
+                jsonStr = response.read()
+                data = json.loads(jsonStr)
+                if data.has_key('result') and len(data['result']) \
+                        and data['result'][0]['lrc']:
+                    self.lrcUrl = data['result'][0]['lrc']
+                    self.downloadLRCFile()
+                else:
+                    self.emit(SIGNAL("complete(bool)"), False)
             else:
                 self.emit(SIGNAL("complete(bool)"), False)
-        else:
+        except:
             self.emit(SIGNAL("complete(bool)"), False)
 
     def downloadLRCFile(self):
-        if self.lrcUrl:
-            if isinstance(self.lrcUrl, unicode):
-                self.lrcUrl = self.lrcUrl.encode('utf-8')
-            f = urllib2.urlopen(self.lrcUrl)
-            path = '../lrc/'
-            if not os.path.exists(path):
-                os.mkdir(path)
-            path = path + unicode(self.args[0]) + '_' + unicode(self.args[1]) + '.lrc'
-            data = f.read()
-            if data:
-                with open(path, "wb+") as code:
-                    code.write(data)
-                code.close()
-                self.lrcPath = QString(path)
-                self.emit(SIGNAL("complete(bool)"), True)
-            else:
-                self.emit(SIGNAL("complete(bool)"), False)
+        try:
+            if self.lrcUrl:
+                if isinstance(self.lrcUrl, unicode):
+                    self.lrcUrl = self.lrcUrl.encode('utf-8')
+                f = urllib2.urlopen(self.lrcUrl)
+                path = 'lrc/'
+                if not os.path.exists(path):
+                    os.mkdir(path)
+                path = path + unicode(self.args[0]) + '_' + unicode(self.args[1]) + '.lrc'
+                data = f.read()
+                if data:
+                    with open(path, "wb+") as code:
+                        code.write(data)
+                    code.close()
+                    self.lrcPath = QString(path)
+                    self.emit(SIGNAL("complete(bool)"), True)
+                else:
+                    self.emit(SIGNAL("complete(bool)"), False)
+        except:
+            self.emit(SIGNAL("complete(bool)"), False)

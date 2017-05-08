@@ -44,6 +44,11 @@ class LRCShower(QListView):
         self.mainWidget = parent
         self.model = QStandardItemModel()
         self.setModel(self.model)
+        self.setStyleSheet(
+            '''
+            LRCShower{background-color: rgba(230, 230, 240, 0)}
+            '''
+        )
 
         self.setWordWrap(True)
         self.setUniformItemSizes(True)
@@ -76,7 +81,7 @@ class LRCShower(QListView):
 
         self.downloadingLabel = StateLabel(self)
         self.downloadingLabel.setGeometry(150, 110, 200, 200)
-        self.movie = QMovie("../res/loading.gif")
+        self.movie = QMovie("res/loading.gif")
         self.movie.setScaledSize(QSize(200, 200))
         self.movie.start()
         self.movie.setSpeed(70)
@@ -108,7 +113,7 @@ class LRCShower(QListView):
                 lrc = lrcFile.read()
                 self.lrcDict = self.lrcToDict(lrc)
             except Exception as e:
-                raise ValueError(e)
+                logging.warning(e.message)
             finally:
                 lrcFile.close()
                 if self.lrcDict:
@@ -125,7 +130,6 @@ class LRCShower(QListView):
                         finally:
                             item = QStandardItem(word)
                             item.setTextAlignment(Qt.AlignCenter)
-                            item.setFont(QFont(50))
                             self.model.appendRow(item)
                     if self.mainWidget.playingMusic:
                         self.mainWidget.musicToLrcDict\
@@ -161,15 +165,15 @@ class LRCShower(QListView):
                 if self.currentRow != -1:
                     self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(0, 0, 0)))
                 self.currentRow = self.lrcTimeList.index(t)
-                self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(255, 0, 0)))
+                self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(255, 100, 100)))
                 self.scrollTo(self.model.index(self.currentRow, 0), QAbstractItemView.PositionAtCenter)
             if time < t:
                 if self.lrcTimeList.index(t) != 0:
                     if self.currentRow != -1:
                         self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(0, 0, 0)))
                     self.currentRow = self.lrcTimeList.index(t) - 1
-                    self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(255, 0, 0)))
-                    # self.scrollTo(self.model.index(self.currentRow, 0), QAbstractItemView.PositionAtCenter)
+                    self.model.item(self.currentRow, 0).setForeground(QBrush(QColor(255, 100, 100)))
+                    self.scrollTo(self.model.index(self.currentRow, 0), QAbstractItemView.PositionAtCenter)
                 break
 
     def clear(self):

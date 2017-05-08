@@ -1,10 +1,18 @@
 # -*- encoding:utf-8 -*-
 
-from music_tableview import *
-from music_file_object import *
+import ConfigParser
+import logging
+import os
+import random
+
 from PyQt4.phonon import Phonon
-import top_tool_frame, music_info_frame, bottom_tool_frame
-import random, ConfigParser, os
+
+import bottom_tool_frame
+import music_info_frame
+import music_player_main_frame
+import top_tool_frame
+from music_file_object import *
+from music_tableview import *
 
 try:
     _fromUtf8 = QString.fromUtf8
@@ -41,22 +49,25 @@ class MainWindow(QWidget):
         self.isImporting = False
 
         self.resize(800, 600)
-        rect = self.rect()
         self.setWindowFlags(Qt.Window | Qt.FramelessWindowHint | Qt.WindowMinMaxButtonsHint)
-        # self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
         self.tableView = MusicTableView('all', self)
         self.tableViewFav = MusicTableView('fav', self)
 
-        self.importConfig() # 需tableView已初始化，musicInfoFrame未初始化
+        # 需tableView已初始化，musicInfoFrame未初始化
+        self.importConfig()
 
-        self.topToolFrame = top_tool_frame.TopToolFrame(self)
-        self.bottomToolFrame = bottom_tool_frame.BottomToolFrame(self)
-        self.musicInfoFrame = music_info_frame.MusicInfoFrame(self)
-
-        self.tabWidget = QTabWidget(self)
-        self.tabWidget.setGeometry(rect.right() - 300, 60, 301, rect.bottom() - 117)
-
+        self.mainFrame = music_player_main_frame.MusicPlayerMainFrame(self)
+        self.topToolFrame = top_tool_frame.TopToolFrame(self, self.mainFrame)
+        self.bottomToolFrame = bottom_tool_frame.BottomToolFrame(self, self.mainFrame)
+        self.musicInfoFrame = music_info_frame.MusicInfoFrame(self, self.mainFrame)
+        rect = self.mainFrame.rect()
+        self.tabWidget = QTabWidget(self.mainFrame)
+        self.tabWidget.setGeometry(rect.right() - 300, 60, 301, rect.bottom() - 118)
+        self.tabWidget.setStyleSheet(
+            '''QTabWidget:pane {border-top:0px solid #e8f3f9; background:transparent;}
+               QTabBar:tab {width:150px; height:25px}''')
         self.tabWidget.addTab(self.tableView, u'播放列表')
         self.tabWidget.addTab(self.tableViewFav, u'我的收藏')
         self.tabWidget.setCurrentIndex(0)
@@ -82,12 +93,6 @@ class MainWindow(QWidget):
         self.mediaObject.tick.connect(self.musicInfoFrame.lrcShower.updateLRC)
 
         self.tabWidget.currentChanged.connect(self.tabChanged)
-
-        self.setStyleSheet(
-            '''
-            MainWindow{background-color: rgb(230, 230, 240)}
-            '''
-        )
 
     def closeEvent(self, event):
         self.exportConfig()
@@ -151,8 +156,7 @@ class MainWindow(QWidget):
         config.set('Player', 'lastLRCOpenedPath', _toUtf8(self.musicInfoFrame.lrcShower.lastOpenedPath).data())
         config.set('Player', 'musicToLRCDict', self.musicToLrcDict)
         try:
-            configPath = os.path.join(os.path.dirname(__file__), "setting.ini")
-            configFile = open(configPath, 'w+')
+            configFile = open('src/setting.ini', 'w+')
             config.write(configFile)
         except Exception as e:
             raise ValueError(e)
@@ -163,8 +167,7 @@ class MainWindow(QWidget):
         self.isImporting = True
         config = ConfigParser.ConfigParser()
         try:
-            configPath = os.path.join(os.getcwd(), "setting.ini")
-            config.read(configPath)
+            config.read('src/setting.ini')
             if config:
                 self.lastOpenedPath = _fromUtf8(config.get('Player', 'lastOpenedPath'))
                 musicList = eval(config.get('Player', 'musicList'))
@@ -175,6 +178,7 @@ class MainWindow(QWidget):
                 self.addMusics(qMusicList, qFavList)
                 self.musicToLrcDict = eval(config.get('Player', 'musicToLRCDict'))
         except Exception as e:
+            logging.debug(e.message)
             config.add_section('Player')
             config.set('Player', 'lastOpenedPath',
                        _toUtf8(self.lastOpenedPath).data())
@@ -190,11 +194,10 @@ class MainWindow(QWidget):
             config.set('Player', 'musicToLRCDict', {})
             self.isImporting = False
             try:
-                configPath = os.path.join(os.path.dirname(__file__), "setting.ini")
-                configFile = open(configPath, 'w+')
+                configFile = open('src/setting.ini', 'w+')
                 config.write(configFile)
             except Exception as e:
-                raise ValueError(e)
+                logging.debug(e.message)
             finally:
                 self.isImporting = False
                 configFile.close()
@@ -266,3 +269,6 @@ class MainWindow(QWidget):
 
     def tabChanged(self, i):
         self.tabIndex = i
+
+    def trayIconActived(self, reason):
+        self.activateWindow()
