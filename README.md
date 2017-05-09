@@ -4,7 +4,7 @@
 ![image](https://github.com/caiwb/MusicPlayer-PyQT/blob/master/MusicPlayer/res/screen_shot.png)
 
 # Run Configurations:
-script: MusicPlayer\launcher.py
+script: MusicPlayer\launcher.py\n
 working directory: MusicPlayer
 
 # 2.0.0 修改内容
