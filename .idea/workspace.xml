@@ -2,153 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3394eaad-babf-4ab2-a932-2811380fbd5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicPlayer/lib/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicPlayer/src/__init__.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/launcher.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/music_player_main.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/music_system_tray.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/src/readme" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MusicPlayer-PyQT.iml" afterPath="$PROJECT_DIR$/.idea/MusicPlayer-PyQT.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/bottom_tool_frame.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/bottom_tool_frame.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/lrc_downloader.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/lrc_downloader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/lrc_shower.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/lrc_shower.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/music_file_object.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/music_file_object.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/music_info_frame.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/music_info_frame.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/music_tableview.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/music_tableview.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MusicPlayer/res/screenshot.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/setting.ini" afterPath="$PROJECT_DIR$/MusicPlayer/src/setting.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicPlayer/src/top_tool_frame.py" afterPath="$PROJECT_DIR$/MusicPlayer/src/top_tool_frame.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/ConfigParser.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/ConfigParser.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/big5freq.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/big5freq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/big5prober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/big5prober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/chardetect.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/chardetect.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/chardistribution.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/chardistribution.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/charsetgroupprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/charsetgroupprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/charsetprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/charsetprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/codingstatemachine.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/codingstatemachine.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/compat.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/compat.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/constants.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/constants.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/cp949prober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/cp949prober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/escprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/escprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/escsm.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/escsm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/eucjpprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/eucjpprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/euckrfreq.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/euckrfreq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/euckrprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/euckrprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/euctwfreq.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/euctwfreq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/euctwprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/euctwprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/gb2312freq.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/gb2312freq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/gb2312prober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/gb2312prober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/hebrewprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/hebrewprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/jisfreq.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/jisfreq.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/jpcntx.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/jpcntx.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langbulgarianmodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langbulgarianmodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langcyrillicmodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langcyrillicmodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langgreekmodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langgreekmodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langhebrewmodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langhebrewmodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langhungarianmodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langhungarianmodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/langthaimodel.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/langthaimodel.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/latin1prober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/latin1prober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/mbcharsetprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/mbcharsetprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/mbcsgroupprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/mbcsgroupprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/mbcssm.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/mbcssm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/sbcharsetprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/sbcharsetprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/sbcsgroupprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/sbcsgroupprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/sjisprober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/sjisprober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/universaldetector.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/universaldetector.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/chardet/utf8prober.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/chardet/utf8prober.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/enum.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/enum.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/decoder.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/decoder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/encoder.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/encoder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/scanner.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/scanner.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_check_circular.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_check_circular.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_decode.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_decode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_default.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_default.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_dump.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_dump.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_encode_basestring_ascii.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_encode_basestring_ascii.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_fail.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_fail.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_float.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_float.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_indent.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_indent.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_pass1.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_pass1.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_pass2.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_pass2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_pass3.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_pass3.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_recursion.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_recursion.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_scanstring.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_scanstring.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_separators.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_separators.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_speedups.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_speedups.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_tool.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_tool.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tests/test_unicode.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tests/test_unicode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/json/tool.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/json/tool.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/logging/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/logging/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/logging/config.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/logging/config.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/logging/handlers.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/logging/handlers.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_compat.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_compat.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_constants.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_constants.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_file.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_file.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_argv.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_argv.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_compat.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_compat.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_environ.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_environ.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_fsnative.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_fsnative.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_print.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_print.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_stdlib.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_stdlib.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_temp.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_temp.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_winansi.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_winansi.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_senf/_winapi.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_senf/_winapi.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tags.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tags.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/mid3cp.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/mid3cp.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/mid3iconv.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/mid3iconv.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/mid3v2.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/mid3v2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/moggsplit.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/moggsplit.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/mutagen_inspect.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/mutagen_inspect.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_tools/mutagen_pony.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_tools/mutagen_pony.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/_vorbis.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/_vorbis.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/aac.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/aac.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/aiff.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/aiff.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/apev2.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/apev2.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/asf/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/asf/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/asf/_attrs.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/asf/_attrs.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/asf/_objects.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/asf/_objects.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/asf/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/asf/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/easyid3.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/easyid3.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/easymp4.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/easymp4.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/flac.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/flac.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_file.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_file.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_frames.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_frames.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_id3v1.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_id3v1.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_specs.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_specs.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_tags.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_tags.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/id3/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/id3/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/m4a.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/m4a.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/monkeysaudio.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/monkeysaudio.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp3/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp3/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp3/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp3/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp4/__init__.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp4/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp4/_as_entry.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp4/_as_entry.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp4/_atom.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp4/_atom.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/mp4/_util.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/mp4/_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/musepack.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/musepack.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/ogg.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/ogg.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/oggflac.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/oggflac.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/oggopus.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/oggopus.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/oggspeex.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/oggspeex.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/oggtheora.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/oggtheora.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/oggvorbis.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/oggvorbis.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/optimfrog.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/optimfrog.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/smf.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/smf.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/trueaudio.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/trueaudio.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/mutagen/wavpack.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/mutagen/wavpack.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/os.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/os.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/re.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/re.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MusicPlayer/3rdLib/urllib2.py" afterPath="$PROJECT_DIR$/MusicPlayer/lib/urllib2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -158,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MusicPlayer-PyQT$launcher.coverage" NAME="launcher Coverage Results" MODIFIED="1494227199183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusicPlayer" />
+    <SUITE FILE_PATH="coverage/MusicPlayer-PyQT$launcher.coverage" NAME="launcher Coverage Results" MODIFIED="1494320883551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MusicPlayer" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -169,8 +25,8 @@
       <file leaf-file-name="music_info_frame.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_info_frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="54" column="25" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="969">
+              <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -180,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_player_main_frame.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -189,7 +45,7 @@
       <file leaf-file-name="music_player_widget.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_player_widget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="3838">
               <caret line="214" column="59" lean-forward="false" selection-start-line="214" selection-start-column="59" selection-end-line="214" selection-end-column="59" />
               <folding />
             </state>
@@ -199,21 +55,9 @@
       <file leaf-file-name="QObject.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtCore/QObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="2242">
               <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="launcher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MusicPlayer/launcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#26#49#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -221,8 +65,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="171">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -231,11 +75,9 @@
       <file leaf-file-name="music_file_object.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_file_object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-              <folding>
-                <element signature="e#27#47#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1140">
+              <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,7 +85,7 @@
       <file leaf-file-name="QString.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtCore/QString.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="2109">
               <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="21" />
               <folding />
             </state>
@@ -253,7 +95,7 @@
       <file leaf-file-name="ConfigParser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicPlayer/lib/ConfigParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="4997">
               <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
               <folding />
             </state>
@@ -263,7 +105,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicPlayer/lib/chardet/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="399">
               <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
@@ -369,8 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -397,13 +237,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicPlayer-PyQT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicPlayer-PyQT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MusicPlayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/优秀作业/莫宇" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -679,13 +539,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33158997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -698,6 +557,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -807,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3534">
           <caret line="187" column="61" lean-forward="false" selection-start-line="187" selection-start-column="61" selection-end-line="187" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="71" column="54" lean-forward="false" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,13 +723,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicPlayer/lib/chardet/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="399">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
@@ -885,7 +736,7 @@
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtCore/QObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="2242">
           <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
           <folding />
         </state>
@@ -894,22 +745,22 @@
     <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_player_main_frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_info_frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="54" column="25" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+        <state relative-caret-position="969">
+          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_player_widget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="3838">
           <caret line="214" column="59" lean-forward="false" selection-start-line="214" selection-start-column="59" selection-end-line="214" selection-end-column="59" />
           <folding />
         </state>
@@ -917,7 +768,7 @@
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1494736245/PyQt4/QtCore/QString.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="2109">
           <caret line="111" column="21" lean-forward="false" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="21" />
           <folding />
         </state>
@@ -925,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicPlayer/lib/ConfigParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="4997">
           <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
           <folding />
         </state>
@@ -933,11 +784,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicPlayer/src/music_file_object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-          <folding>
-            <element signature="e#27#47#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1140">
+          <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -945,16 +794,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="171">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
           <folding />
         </state>
       </provider>
